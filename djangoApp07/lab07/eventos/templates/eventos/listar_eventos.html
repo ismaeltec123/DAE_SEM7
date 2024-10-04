@@ -1,0 +1,12 @@
+<h2>Lista de Eventos</h2>
+<ul>
+    {% for evento in eventos %}
+        <li>
+            {{ evento.nombre }} - {{ evento.fecha }} 
+            <a href="{% url 'actualizar_evento' evento.id %}">Editar</a>
+            <a href="{% url 'eliminar_evento' evento.id %}">Eliminar</a>
+            <a href="{% url 'registrar_usuario' evento.id %}">Registrarse</a>
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'crear_evento' %}">Crear un nuevo evento</a>

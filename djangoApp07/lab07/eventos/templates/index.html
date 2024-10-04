@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Eventos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .container {
+            width: 80%;
+            margin: 20px auto;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin: 10px;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Bienvenido al Sistema de Gestión de Eventos</h1>
+</header>
+
+<div class="container">
+    <h2>Opciones Disponibles</h2>
+    <a href="{% url 'listar_eventos' %}" class="btn">Ver Lista de Eventos</a>
+    <a href="{% url 'crear_evento' %}" class="btn">Crear Nuevo Evento</a>
+    <a href="{% url 'logout' %}" class="btn">Cerrar Sesión</a>
+
+</div>
+
+</body>
+</html>
